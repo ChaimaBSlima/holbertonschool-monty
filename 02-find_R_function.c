@@ -15,7 +15,7 @@ void find_R_function(char *opcode, char *value, int line_number, int format)
 
 	instruction_t funcions_list[] = {
 		{"push", add_to_stack}, {"pall", print_all},
-		{"pint", print_one},
+		{"pint", print_one}, {"pop", remove_top},
 		{NULL, NULL}};
 
 	for (j = 1, i = 0; funcions_list[i].opcode != NULL; i++)

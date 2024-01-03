@@ -61,5 +61,6 @@ void add_node_to_queue(stack_t **new_node);
 void add_to_stack(stack_t **new_node, unsigned int LN);
 void print_all(stack_t **stack, unsigned int line_number);
 void print_one(stack_t **stack, unsigned int line_number);
+void remove_top(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H*/
