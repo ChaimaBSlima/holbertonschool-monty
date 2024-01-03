@@ -11,9 +11,12 @@ stack_t *create_node(int n)
 	node = malloc(sizeof(stack_t));
 	if (node == NULL)
 		fprintf(stderr, "Error: malloc failed\n");
-	node->next = NULL;
-	node->prev = NULL;
-	node->n = n;
+	else
+	{
+		node->next = NULL;
+		node->prev = NULL;
+		node->n = n;
+	}
 	return (node);
 }
 
@@ -59,4 +62,3 @@ void add_node_to_queue(stack_t **new_node)
 	tmp->next = *new_node;
 	(*new_node)->prev = tmp;
 }
-
