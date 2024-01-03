@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * add_to_stack - Adds a node to the stack.
+ * add_to_stack - task 0: Adds a node to the stack.
  * @new_node: Pointer to the new node.
  * @LN:unuseful variable in this function.
  * Return: void.
@@ -24,7 +24,7 @@ void add_to_stack(stack_t **new_node, __attribute__((unused)) unsigned int LN)
 }
 
 /**
- * print_all - Adds a node to the stack.
+ * print_all - task 0: Adds a node to the stack.
  * @stack: Pointer to a pointer to top node of the stack.
  * @line_number: line number of  the opcode.
  * Return: void
@@ -44,7 +44,7 @@ void print_all(stack_t **stack, unsigned int line_number)
 	}
 }
 /**
- * print_one - Prints the top node of the stack.
+ * print_one - task 1: Prints the top node of the stack.
  * @stack: Pointer to a pointer to top node of the stack.
  * @line_number: the line number of of the opcode.
  * Return: void
@@ -61,9 +61,9 @@ void print_one(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * remove_top - removes the top element of the stack.
+ * remove_top - task 2:removes the top element of the stack.
  * @stack: Pointer to a pointer to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * @line_number:  the line number of of the opcode.
  * Return: void
  */
 void remove_top(stack_t **stack, unsigned int line_number)
@@ -80,4 +80,28 @@ void remove_top(stack_t **stack, unsigned int line_number)
 	if (*stack != NULL)
 		(*stack)->prev = NULL;
 	free(tmp);
+}
+
+/**
+ * swap_nodes - task 3: Swaps the top two elements of the stack.
+ * @stack: Pointer to a pointer  to top node of the stack.
+ * @line_number:  the line number of of the opcode.
+ */
+void swap_nodes(stack_t **stack, unsigned int line_number)
+{
+	stack_t *tmp;
+
+	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	tmp = (*stack)->next;
+	(*stack)->next = tmp->next;
+	if (tmp->next != NULL)
+		tmp->next->prev = *stack;
+	tmp->next = *stack;
+	(*stack)->prev = tmp;
+	tmp->prev = NULL;
+	*stack = tmp;
 }
