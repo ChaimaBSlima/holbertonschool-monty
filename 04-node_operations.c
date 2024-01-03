@@ -1,5 +1,5 @@
 #include "monty.h"
-stack_t *head = NULL;
+
 /**
  * create_node - Creates a node.
  * @n: Number to go inside the node.
