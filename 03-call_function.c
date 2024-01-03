@@ -22,23 +22,23 @@ void call_function(op_func func, char *op, char *value, int LineN, int format)
 			flag = -1;
 		}
 		if (value == NULL)
-			fprintf(stderr, "L%d: usage: push integer\n", LineN);
-		else
 		{
-			for (i = 0; value[i] != '\0'; i++)
-			{
-				if (isdigit(value[i]) == 0)
-				{
-					fprintf(stderr, "L%d: usage: push integer\n", LineN);
-					return;
-				}
-			}
-			node = create_node(atoi(value) * flag);
-			if (format == 0)
-				func(&node, LineN);
-			if (format == 1)
-				add_node_to_queue(&node);
+			fprintf(stderr, "L%d: usage: push integer\n", LineN);
+			exit(EXIT_FAILURE);
 		}
+		for (i = 0; value[i] != '\0'; i++)
+		{
+			if (isdigit(value[i]) == 0)
+			{
+				fprintf(stderr, "L%d: usage: push integer\n", LineN);
+				exit(EXIT_FAILURE);
+			}
+		}
+		node = create_node(atoi(value) * flag);
+		if (format == 0)
+			func(&node, LineN);
+		if (format == 1)
+			add_node_to_queue(&node);
 	}
 	else
 		func(&head, LineN);

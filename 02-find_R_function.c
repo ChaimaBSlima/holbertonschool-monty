@@ -27,5 +27,8 @@ void find_R_function(char *opcode, char *value, int line_number, int format)
 		}
 	}
 	if (j == 1)
+	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
+		exit(EXIT_FAILURE);
+	}
 }
