@@ -64,4 +64,7 @@ void print_one(stack_t **stack, unsigned int line_number);
 void remove_top(stack_t **stack, unsigned int line_number);
 void swap_nodes(stack_t **stack, unsigned int line_number);
 
+/* Function of the file 06-Mandatory_Functions2.c */
+void add_nodes(stack_t **stack, unsigned int line_number);
+
 #endif /* MONTY_H*/
