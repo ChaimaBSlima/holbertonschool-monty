@@ -66,5 +66,6 @@ void swap_nodes(stack_t **stack, unsigned int line_number);
 
 /* Function of the file 06-Mandatory_Functions2.c */
 void add_nodes(stack_t **stack, unsigned int line_number);
+void do_nothing(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H*/

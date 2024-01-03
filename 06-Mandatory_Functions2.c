@@ -21,3 +21,14 @@ void add_nodes(stack_t **stack, unsigned int line_number)
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
+
+/**
+ * do_nothing - Does nothing.
+ * @stack: unuseful variable in this function.
+ * @line_number: unuseful variable in this function.
+ */
+void do_nothing(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+}
