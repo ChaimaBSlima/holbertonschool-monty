@@ -11,9 +11,11 @@ void open_file(char *file_name)
 
 	if (file_name == NULL || fd == NULL)
 		fprintf(stderr, "Error: Can't open file %s\n", file_name);
-
-	read_file(fd);
-	fclose(fd);
+	else
+	{
+		read_file(fd);
+		fclose(fd);
+	}
 }
 
 /**
