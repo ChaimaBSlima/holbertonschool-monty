@@ -1,12 +1,12 @@
-#include "monty_headerflie.h"
+#include "monty.h"
 
 /**
  * add_to_stack - Adds a node to the stack.
  * @new_node: Pointer to the new node.
- * @line_number:unuseful variable in this function.
+ * @LN:unuseful variable in this function.
  * Return: void.
  */
-void add_to_stack(stack_t **new_node, __attribute__((unused))unsigned int line_number)
+void add_to_stack(stack_t **new_node, __attribute__((unused))unsigned int LN)
 {
 	stack_t *tmp;
 
@@ -24,7 +24,7 @@ void add_to_stack(stack_t **new_node, __attribute__((unused))unsigned int line_n
 }
 
 /**
- * print_stack - Adds a node to the stack.
+ * print_all - Adds a node to the stack.
  * @stack: Pointer to a pointer to top node of the stack.
  * @line_number: line number of  the opcode.
  * Return: void
