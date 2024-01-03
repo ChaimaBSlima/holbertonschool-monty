@@ -12,7 +12,6 @@ stack_t *create_node(int n)
 	if (node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		return(NULL);
 	}
 	node->next = NULL;
 	node->prev = NULL;
