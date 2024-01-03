@@ -6,7 +6,7 @@
  * @LN:unuseful variable in this function.
  * Return: void.
  */
-void add_to_stack(stack_t **new_node, __attribute__((unused))unsigned int LN)
+void add_to_stack(stack_t **new_node, __attribute__((unused)) unsigned int LN)
 {
 	stack_t *tmp;
 
@@ -33,7 +33,7 @@ void print_all(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp;
 
-	(void) line_number;
+	(void)line_number;
 	if (stack == NULL)
 		exit(EXIT_FAILURE);
 	tmp = *stack;
@@ -42,4 +42,20 @@ void print_all(stack_t **stack, unsigned int line_number)
 		printf("%d\n", tmp->n);
 		tmp = tmp->next;
 	}
+}
+/**
+ * print_one - Prints the top node of the stack.
+ * @stack: Pointer to a pointer pointing to top node of the stack.
+ * @line_number: the line number of of the opcode.
+ * Return: void
+ */
+void print_one(stack_t **stack, unsigned int line_number)
+{
+	if (stack == NULL || *stack == NULL)
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	printf("%d\n", (*stack)->n);
 }
