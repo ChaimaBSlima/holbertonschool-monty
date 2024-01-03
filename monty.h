@@ -57,7 +57,7 @@ stack_t *create_node(int n);
 void free_nodes(void);
 void add_node_to_queue(stack_t **new_node);
 
-/* Function of the file 05-Mandatory_Functions.c */
+/* Function of the file 05-Mandatory_Functions1.c */
 void add_to_stack(stack_t **new_node, unsigned int LN);
 void print_all(stack_t **stack, unsigned int line_number);
 void print_one(stack_t **stack, unsigned int line_number);
