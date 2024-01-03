@@ -46,16 +46,18 @@ void open_file(char *file_name);
 void read_file(FILE *fd);
 int parse_line(char *buffer, int line_number, int format);
 
-/* Functions of the file 02-functions_calls.c */
+/* Function of the file 02-find_R_function.c */
 void find_R_function(char *opcode, char *value, int line_number, int format);
+
+/* Function of the file 03-call_function */
 void call_function(op_func func, char *op, char *value, int LineN, int format);
 
-/* Function of the file 03-node_operations.c */
+/* Function of the file 04-node_operations.c */
 stack_t *create_node(int n);
 void free_nodes(void);
 void add_node_to_queue(stack_t **new_node);
 
-/* Function of the file 04-Mandatory_Functions.c */
+/* Function of the file 05-Mandatory_Functions.c */
 void add_to_stack(stack_t **new_node, unsigned int LN);
 void print_all(stack_t **stack, unsigned int line_number);
 
