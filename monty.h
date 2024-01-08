@@ -70,5 +70,6 @@ void do_nothing(stack_t **stack, unsigned int line_number);
 
 /* Function of the file 07-Advanced_Functions1.c */
 void sub_nodes(stack_t **stack, unsigned int line_number);
+void div_nodes(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H*/
