@@ -130,6 +130,9 @@ void print_Ascii(stack_t **stack, unsigned int line_number)
 
 	i = (*stack)->n;
 	if (i < 0 || i > 127)
-		string_err(10, line_number);
+	{
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 	printf("%c\n", i);
 }
