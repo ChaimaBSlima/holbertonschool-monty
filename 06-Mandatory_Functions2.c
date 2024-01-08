@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * add_nodes - Add node the top two elements of the stack.
+ * add_nodes - task 4: Add node the top two elements of the stack.
  * @stack: Pointer to a pointer  to top node of the stack.
  * @line_number:  the line number of of the opcode.
  */
@@ -23,7 +23,7 @@ void add_nodes(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * do_nothing - Does nothing.
+ * do_nothing - task 5: Does nothing.
  * @stack: unuseful variable in this function.
  * @line_number: unuseful variable in this function.
  */
