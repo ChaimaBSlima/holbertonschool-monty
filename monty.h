@@ -73,5 +73,6 @@ void sub_nodes(stack_t **stack, unsigned int line_number);
 void div_nodes(stack_t **stack, unsigned int line_number);
 void mul_nodes(stack_t **stack, unsigned int line_number);
 void mod_nodes(stack_t **stack, unsigned int line_number);
+void print_Ascii(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H*/

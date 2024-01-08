@@ -79,6 +79,7 @@ void mul_nodes(stack_t **stack, unsigned int line_number)
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
+
 /**
  * mod_nodes - task 9:computes the rest of the division of the
  * second top element of the stack by the top element of the stack.
@@ -107,4 +108,28 @@ void mod_nodes(stack_t **stack, unsigned int line_number)
 	(*stack)->n = sum;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
+}
+
+/**
+ * print_Ascii - task 11:prints the char at the top
+ * of the stack, followed by a new line.
+ * @stack: Pointer to a pointer  to top node of the stack.
+ * @line_number: the line number of of the opcode.
+ *
+ * Return: void
+ */
+void print_Ascii(stack_t **stack, unsigned int line_number)
+{
+	int i;
+
+	if (stack == NULL || *stack == NULL)
+	{
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	i = (*stack)->n;
+	if (i < 0 || i > 127)
+		string_err(10, line_number);
+	printf("%c\n", i);
 }

@@ -19,7 +19,7 @@ void find_R_function(char *opcode, char *value, int line_number, int format)
 		 {"swap", swap_nodes}, {"add", add_nodes},
 		  {"nop", do_nothing}, {"sub", sub_nodes},
 		   {"div", div_nodes}, {"mul", mul_nodes},
-		   {"mod", mod_nodes},
+		   {"mod", mod_nodes}, {"pchar", print_Ascii},
 		    {NULL, NULL}
 		};
 
