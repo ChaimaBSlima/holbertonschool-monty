@@ -23,6 +23,9 @@ void find_R_function(char *opcode, char *value, int line_number, int format)
 		    {NULL, NULL}
 		};
 
+	if (opcode[0] == '#')
+		return;
+
 	for (j = 1, i = 0; funcions_list[i].opcode != NULL; i++)
 	{
 		if (strcmp(opcode, funcions_list[i].opcode) == 0)
