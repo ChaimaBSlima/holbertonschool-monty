@@ -8,8 +8,9 @@
  * @format: Format specifier. If 0 Nodes will be entered as a stack.
  * Return: void
  */
-void call_function(op_func func, char *op, char *value, int LineN, __attribute__((unused))int format)
+void call_function(op_func func, char *op, char *value, int LineN,int format)
 {
+	(void)format;
 	stack_t *node;
 	int flag, i;
 
@@ -35,10 +36,8 @@ void call_function(op_func func, char *op, char *value, int LineN, __attribute__
 			}
 		}
 		node = create_node(atoi(value) * flag);
-		/*if (format == 0)*/
-			func(&node, LineN);
-		/*if (format == 1)
-			add_node_to_queue(&node);*/
+		func(&node, LineN);
+
 	}
 	else
 		func(&head, LineN);
