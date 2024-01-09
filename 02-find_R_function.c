@@ -16,11 +16,12 @@ void find_R_function(char *opcode, char *value, int line_number, int format)
 	instruction_t funcions_list[] = {
 		{"push", add_to_stack}, {"pall", print_all},
 		{"pint", print_one}, {"pop", remove_top},
-		 {"swap", swap_nodes}, {"add", add_nodes},
-		  {"nop", do_nothing}, {"sub", sub_nodes},
-		   {"div", div_nodes}, {"mul", mul_nodes},
-		   {"mod", mod_nodes}, {"pchar", print_Ascii},
-		    {NULL, NULL}
+		{"swap", swap_nodes}, {"add", add_nodes},
+		{"nop", do_nothing}, {"sub", sub_nodes},
+		{"div", div_nodes}, {"mul", mul_nodes},
+		{"mod", mod_nodes}, {"pchar", print_Ascii},
+		{"pstr", print_string},
+		{NULL, NULL}
 		};
 
 	if (opcode[0] == '#')
