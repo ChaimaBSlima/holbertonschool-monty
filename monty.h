@@ -77,5 +77,6 @@ void print_Ascii(stack_t **stack, unsigned int line_number);
 
 /* Function of the file 08-Advanced_Functions2.c */
 void print_string(stack_t **stack, __attribute__((unused))unsigned int LN);
+void reverse_nodes(stack_t **stack, __attribute__((unused))unsigned int LineN);
 
 #endif /* MONTY_H*/
