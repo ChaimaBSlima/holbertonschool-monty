@@ -20,7 +20,8 @@ void find_R_function(char *opcode, char *value, int line_number, int format)
 		{"nop", do_nothing}, {"sub", sub_nodes},
 		{"div", div_nodes}, {"mul", mul_nodes},
 		{"mod", mod_nodes}, {"pchar", print_Ascii},
-		{"pstr", print_string}, {"rotl", reverse_nodes},
+		{"pstr", print_string}, {"rotl", rotates_to_the_top},
+		{"rotr", rotates_to_the_bottom},
 		{NULL, NULL}
 		};
 
