@@ -1,4 +1,5 @@
 <h1><p align="center"> The Monty Program </h1></p></font>
+
 ## The Monty language
 Monty 0.98 is a scripting language that is first compiled into Monty byte codes (Just like Python). It relies on a unique stack, with specific instructions to manipulate it. The goal of this project is to create an interpreter for Monty ByteCodes files.
 
@@ -76,3 +77,29 @@ If there is a malloc problem, we got the error message `Error: malloc failed`, f
 |`rotr` |  rotates the stack to the bottom.|rotr never fails|
 
 `<line_number>`  is the line number where the instruction appears.
+
+## Compilation & Output
+```
+$ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
+```
+## Files
+| Files |  Description                |
+| :-------- |  :------------------------- |
+| `monty.h` | it's the header file that contain the prototypes of all the functions and all the useful libraries .|
+| `00-main.c` | contain the main function : The entry point of the code. |
+| `01-file_operations.c` | contain the three functions that handeles the file and its contents (opcodes)  |
+| `02-find_R_function.c` | contain a function that find the appropriate function for the opcode |
+|`03-call_function.c` |contain a function that calls the required function |
+|`04-node_operations.c` |contain the three functions that handeles the nodes. |
+|`05-Mandatory_Functions1.c` |contain the functions of the opcodes : push, pall, pint, pop and swap.|
+|`06-Mandatory_Functions2.c` |contain the functions of the opcodes : add and nop. |
+|`07-Advanced_Functions1.c` |contain the functions of the opcodes: sub, div, mul, mod and pchar.|
+|`08-Advanced_Functions2.c` |contain the functions of the opcodes: pstr, rotl and rotr. |
+
+# Authors
+
+- [@ChaimaBSlima](https://github.com/ChaimaBSlima)
+
+
+# 🚀 About Me
+I'm a Machine Learning developer...
